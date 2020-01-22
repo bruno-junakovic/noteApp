@@ -18,15 +18,7 @@ class AddNoteActivity : AppCompatActivity(),NoteListener {
         val binding :ActivityAddNoteBinding = DataBindingUtil.setContentView(this,R.layout.activity_add_note)
         val viewModel=ViewModelProviders.of(this).get(NoteViewModel::class.java)
         binding.viewmodel=viewModel
-
         viewModel.noteListener = this
-
-        ivAddNote.setOnClickListener {
-            viewModel.addNote(this)
-            finish()
-
-        }
-
     }
 
     override fun onSave() {

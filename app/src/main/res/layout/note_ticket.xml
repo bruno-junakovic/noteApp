@@ -3,13 +3,8 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
-    <data>
-        <variable
-            name="noteList"
-            type="com.example.noteapp.ui.NoteViewModel" />
-    </data>
-    <LinearLayout 
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -26,7 +21,7 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{noteList.title}"
+                android:text="title"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp" />
 
@@ -34,7 +29,7 @@
                 android:id="@+id/tvContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{noteList.description}" />
+                android:text="description" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,21 +43,16 @@
 
                 <ImageView
                     android:id="@+id/ivDelete"
-                    android:layout_width="40pt"
-                    android:layout_height="30pt"
-                    android:layout_marginRight="10pt"
+                    android:layout_width="30pt"
+                    android:layout_height="15pt"
+                    android:layout_marginRight="1pt"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_delete_black_24dp" />
 
-                <ImageView
-                    android:id="@+id/ivEdit"
-                    android:layout_width="40pt"
-                    android:layout_height="30pt"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
 </layout>

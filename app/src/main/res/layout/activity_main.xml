@@ -6,7 +6,7 @@
     <data>
         <variable
             name="noteviewmodel"
-            type="com.example.noteapp.ui.NoteViewModel" />
+            type="com.example.noteapp.ui.NoteListViewModel" />
     </data>
 <RelativeLayout
 android:layout_width="match_parent"
@@ -25,11 +25,10 @@ tools:context=".ui.MainActivity">
     app:backgroundTint="@color/colorPrimary"
     app:srcCompat="@drawable/ic_note_add_black_24dp" />
 
-<ListView
-    android:id="@+id/lvNotes"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</ListView>
 </RelativeLayout>
 </layout>
